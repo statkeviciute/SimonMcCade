@@ -1,0 +1,294 @@
+* { box-sizing: border-box; }
+
+html, body {
+	width: 100%;
+	margin: 0;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	background-color: #fff;
+}
+
+/*---------------------------------------------------------------header nav---------------------------------*/
+header {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 5%;
+}
+
+div.logo {
+	background-image: url("logo.png");
+	width: 70px;
+	height: 70px;
+	background-size: auto 60px;
+	background-repeat: no-repeat;
+	margin: 30px;
+}
+
+nav ul {
+	display: inline-flex;
+	list-style: none;
+	padding: 0px;
+}
+
+nav ul li {
+	font-size: 30px;
+	margin-right: 2vw;
+	white-space: nowrap;
+}
+
+nav ul li a {
+	color:#222;
+	text-decoration: none;
+}
+
+nav li a:hover {
+	color: #ff6666;
+	border-bottom: 2px solid #ff6666;
+}
+
+nav ul span li a {
+	color: #ff6666;
+	border-bottom: 2px solid #ff6666;
+}
+nav ul li#index {
+	width: 37vw;
+}
+
+/*-------------------------------------------------------------------main-----------------------------------*/
+.slides img {
+	width: 100%;
+	padding-bottom: 40px;
+}
+
+section {
+	width: 100%;
+	padding: 0 5%;
+	padding-bottom: 80px;
+}
+
+section.mainText {
+	display: flex;
+	padding-top: 0;
+}
+
+section.mainText h2{
+	width: 44%;
+}
+
+.right {
+	width: 56%;
+}
+
+h1 {
+	font-size: 50px;
+	color: #222;
+}
+
+h2 {
+	color: #222;
+	padding: 0;
+	margin: 0;
+	padding-bottom: 50px;
+}
+
+h5 {
+	font-size: 1.5em;
+	color: color: #222;
+	padding: 0;
+	margin: 0;
+}
+
+p {
+	color: #808080;
+	font-size:24px;
+	line-height: 1.4em;
+	padding: 0;
+	margin:0;
+}
+
+main a {
+	color:#222;
+	text-decoration: none;
+}
+
+main a:hover {
+	color: #ff6666;
+	border-bottom: 2px solid #ff6666;
+}
+
+/*------------------------------------------------------------------footer----------------------------------*/
+footer {
+	display: flex;
+	height: auto;
+	background-color: #f2f2f2;
+	width: 100%;
+	padding:5%;
+	flex-wrap: wrap;
+}
+
+div.footer1 {
+	width: 100%;
+	display: flex;
+	padding-bottom: 40px;
+}
+
+footer div.contacts{
+	width: 45vw;
+}
+div.media {
+	width: 100%;
+}
+
+footer div.input {
+	width: 55vw;
+}
+
+footer img {
+	height: 20px;
+	margin-right: 30px;
+	margin-top: 0px;
+	opacity: 0.4;
+}
+
+footer img:hover {
+	opacity: 0.9;
+}
+
+input {
+	border: none;
+	border-bottom: #e2e2e2 1px solid;
+	width: 50vw;
+	background-color: rgba(0, 0, 0, 0);
+	color: #808080;
+	font-size:24px;
+	line-height: 1.4em;
+	opacity: 0.7;
+}
+
+input:focus {
+	outline: none;
+	border-bottom: #222 1px solid;
+}
+
+button {
+	border: none;
+	width: 50vw;
+	background-color: rgba(0, 0, 0, 0);
+	color: #808080;
+	font-size:24px;
+	line-height: 1.4em;
+	text-align: left;
+	padding: 0;
+}
+
+button:focus {
+	outline: none;
+}
+
+button:hover {
+	color: #222;
+	cursor: pointer;
+}
+/*---------------------------------------------------------------media query--------------------------------*/
+
+@media (max-width: 1200px) {
+	div.logo {
+		background-image: url("menu.png");
+		width: 25px;
+		height: 20px;
+		background-size: 25px auto;
+	}
+
+	div.logo:hover {
+		background-image: url(menu2.png);
+		cursor: pointer;
+	}
+
+	li:not(#index) {
+		display: none;
+	}
+
+	p { font-size:20px; }
+
+	h1 { font-size: 40px; }
+
+	h2 { font-size: 20px; }
+
+	h5 { font-size: 20px; }
+
+	#index { font-size: 25px; }
+
+	input { font-size: 20px; }
+
+	button { font-size: 20px; }
+
+}
+
+@media (max-width: 730px) {
+	section.mainText {
+		flex-direction: column;
+	}
+
+	section div.right {
+		width: 100%;
+	}
+
+	.right {
+	width: 100%;
+}
+
+	h2 {
+		padding-bottom: 20px;
+		padding-top: 20px;
+	}
+
+	section {
+		padding-bottom: 20px;
+		padding-top: 30px;
+	}
+
+	.empty {
+		display: none;
+	}
+}
+
+@media (max-width: 400px) {
+	p { font-size: 16px; }
+
+	h1 { font-size: 25px; }
+
+	h2 { font-size: 16px; }
+
+	h5 { 
+		font-size: 16px;
+		padding-top: 20px; 
+	}
+
+	#index { font-size: 18px; }
+
+	input { font-size: 16px; }
+
+	button { font-size: 16px; }
+
+	section {
+		padding-bottom: 10px;
+		padding-top: 10px;
+	}
+
+	div.footer1 {
+		flex-direction: column;
+	}
+
+	footer img {
+		height: 15px;
+		margin-right: 15px;
+	}
+
+	footer p {
+		white-space: nowrap;
+	}
+}
